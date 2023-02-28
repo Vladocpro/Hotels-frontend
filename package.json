@@ -15,6 +15,7 @@
     "@mui/material": "^5.10.14",
     "@mui/x-data-grid": "^5.17.2",
     "@nivo/bar": "^0.80.0",
+    "@nivo/core": "^0.80.0",
     "@reduxjs/toolkit": "^1.9.0",
     "@stripe/react-stripe-js": "^1.16.1",
     "@stripe/stripe-js": "^1.46.0",
