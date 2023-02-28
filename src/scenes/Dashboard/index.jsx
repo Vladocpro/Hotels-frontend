@@ -17,7 +17,7 @@ const Dashboard = () => {
       if(authData.data == null && !isAuth) navigate("/login")
    }
    useEffect(() => {
-      dispatch(fetchAuthMe())
+      if (!isAuth) dispatch(fetchAuthMe())
    },[])
    useEffect(() => {
       redirect()
