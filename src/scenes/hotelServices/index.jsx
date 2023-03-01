@@ -130,6 +130,13 @@ const HotelServices = () => {
                     backgroundColor: colors.blueAccent[700],
                     borderBottom: "none",
                  },
+                 '& .MuiDataGrid-virtualScroller::-webkit-scrollbar-track': {
+                    background: colors.primary[400],
+                 },
+                 '& .MuiDataGrid-virtualScroller::-webkit-scrollbar-thumb': {
+                    backgroundColor: colors.grey[100],
+                    borderRadius: "30px"
+                 },
                  "& .MuiDataGrid-virtualScroller": {
                     backgroundColor: colors.primary[400],
                  },

@@ -59,7 +59,7 @@ const Sidebar =  () => {
             break;
          default:
             if(languageSelector) setActiveItem('Dashboard')
-            else setActiveItem("Обзор")
+            else setActiveItem("Огляд")
       }
    },[currentLocation, languageSelector])
    const redirect = (to, title) => {
@@ -175,7 +175,7 @@ const Sidebar =  () => {
 
                           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
                              <Item
-                                 title={languageSelector ? "Dashboard" : "Обзор"}
+                                 title={languageSelector ? "Dashboard" : "Огляд"}
                                  to="/"
                                  icon={<HomeOutlinedIcon />}
                                  selected={selected}

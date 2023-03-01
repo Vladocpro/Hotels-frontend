@@ -26,14 +26,26 @@ function App() {
    const dispatch = useDispatch();
    const isAuth = useSelector(selectIsAuth);
    const authData= useSelector(state => state.auth)
+   // const authData =  useSelector(state => state.auth.data)
 
+   let navigate = useNavigate()
+   const redirect = () => {
+      if(authData?.status === "loading") return
+      if(authData.data == null && !isAuth) navigate("/login")
+   }
+   useEffect(() => {
+      dispatch(fetchAuthMe())
+   },[])
+   useEffect(() => {
+      redirect()
+   },[authData])
   return (
       <ColorModeContext.Provider value={colorMode} >
          <ThemeProvider theme={theme}>
             <CssBaseline/>
             <div className="app">
                <Sidebar />
-                    <main className="content">
+                      <main className="content">
                      <Topbar/>
                      <Routes>
                         <Route path="/" element={<Dashboard/>}/>
@@ -49,7 +61,6 @@ function App() {
                         <Route path="/barchart" element={<BarChart/>}/>
                      </Routes>
                   </main>
-
             </div>
          </ThemeProvider>
       </ColorModeContext.Provider>
