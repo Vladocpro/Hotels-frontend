@@ -37,7 +37,7 @@ const FAQ = () => {
              </AccordionSummary>
              <AccordionDetails>
                 <Typography>
-                   {languageSelector.current.faqSecondQuestion}
+                   {languageSelector.current.faqSecondAnswer}
                 </Typography>
              </AccordionDetails>
           </Accordion>
@@ -49,7 +49,7 @@ const FAQ = () => {
              </AccordionSummary>
              <AccordionDetails>
                 <Typography>
-                   {languageSelector.current.faqThirdQuestion}
+                   {languageSelector.current.faqThirdAnswer}
                 </Typography>
              </AccordionDetails>
           </Accordion>

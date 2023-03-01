@@ -51,7 +51,7 @@ const BarChart = () => {
 
    return (
        <Box m="20px">
-          <Header title={languageSelector.bool ? "Bar Chart" : "Гістограма"} subtitle={languageSelector ? "Income - Expenses Comparison" : "Прибуток - Витрати Порівняння"} />
+          <Header title={languageSelector.bool ? "Bar Chart" : "Гістограма"} subtitle={languageSelector.bool ? "Income - Expenses Comparison" : "Прибуток - Витрати Порівняння"} />
           <Box height="75vh">
              <ResponsiveBar
                  data={data}

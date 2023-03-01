@@ -97,7 +97,7 @@ const Sidebar =  () => {
    return (
        <div>
           {
-             currentLocation.pathname.split("/")[1] !== "login" && currentLocation.pathname.split("/")[1] !== "register"
+             currentLocation.pathname.split("/")[1] !== "login" && currentLocation.pathname.split("/")[1] !== "register" && isAuth
                  &&
                  (<Box sx={{
                     "& .pro-sidebar-inner": {
