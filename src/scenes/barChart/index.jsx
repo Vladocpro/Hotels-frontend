@@ -20,7 +20,6 @@ const BarChart = () => {
       hotelsSelector.userHotels.data.forEach( item => {
          if (item.user._id == authData._id) hotels.push(item)
       });
-      console.log(hotels)
       let customizedData = [];
       hotels.forEach(item => {
          let object = {};
@@ -38,7 +37,6 @@ const BarChart = () => {
          customizedData.push(object)
       })
       setData(customizedData);
-      console.log(customizedData)
    }
    useEffect(() => {
       if(!authData) return;

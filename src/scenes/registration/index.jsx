@@ -43,7 +43,6 @@ const Registration = () => {
 
    const handleChange = (SelectChangeEvent) => {
       setRole(SelectChangeEvent.target.value);
-      console.log(SelectChangeEvent.target.value)
    };
 
 

@@ -71,7 +71,7 @@ const FavouriteHotels = () => {
                           </Tooltip>
                           <Tooltip title={<Typography style={{fontSize: 14}}>{languageSelector.bool ? "Save changes" : "Зберігти зміни"}</Typography>}  enterDelay={1500} leaveDelay={200}>
                              <IconButton variant="contained" sx={{margin: "0 4px 0 0"}} fullWidth onClick={async ()=> {
-                                await axios.patch('/hotels', {hotel: params.row._id, name: params.row.name,  location: params.row.location}).catch(e => console.log(e))}}>
+                                await axios.patch('/hotels', {hotel: params.row._id, name: params.row.name,  location: params.row.location}).catch()}}>
                                 <SaveAsOutlinedIcon sx={{"marginRight": "2px"}} />
                              </IconButton>
                           </Tooltip>
