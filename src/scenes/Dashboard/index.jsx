@@ -22,9 +22,12 @@ const Dashboard = () => {
       setIsDataFetched(false);
    }
 
+
    useEffect(() => {
       setWaitingForServerRes()
-      dispatch(fetchAuthMe())
+      if (!isAuth) {
+         dispatch(fetchAuthMe())
+      }
    },[])
 
    useEffect(() => {
