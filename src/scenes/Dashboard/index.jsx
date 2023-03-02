@@ -21,17 +21,18 @@ const Dashboard = () => {
       if(authData.data == null && !isAuth) navigate("/login")
       setIsDataFetched(false);
    }
-   useEffect(() => {
-      if(authData.data !== null) setIsDataFetched(false);
-   },[isDataFetched]);
 
    useEffect(() => {
-      setWaitingForServerRes()
-      if (!isAuth) dispatch(fetchAuthMe())
+      if(authData.data === null) {
+         setWaitingForServerRes()
+         dispatch(fetchAuthMe())
+      }
    },[])
+
    useEffect(() => {
       redirect()
    },[authData])
+
    return (
        <div style={{display: "flex", justifyContent: "center", alignItems: "center", textAlign: "center"}}>
           {
