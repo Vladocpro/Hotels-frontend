@@ -36,13 +36,11 @@ const Login = () => {
    const onSubmit = async (values) => {
       setWaitingForServerRes()
       const data = await dispatch(fetchAuth(values))
-
+      setIsDataFetched(false)
       if(!data.payload) {
-         setIsDataFetched(false)
          alert('Incorrect login or password');
          return;
       }
-      setIsDataFetched(false)
       if('token' in data.payload) window.localStorage.setItem('token', data.payload.token)
       navigate("/")
    }

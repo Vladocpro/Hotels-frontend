@@ -37,17 +37,15 @@ const Registration = () => {
       values = {...values, role}
       setWaitingForServerRes()
       const data = await dispatch(fetchRegister(values))
+      setIsDataFetched(false);
       if(data?.meta.requestStatus == "rejected"){
-         setIsDataFetched(false);
          alert('The email is already taken');
          return;
       }
       if(!data.payload) {
-         setIsDataFetched(false);
          alert('Unable to register account');
          return;
       }
-      setIsDataFetched(false);
       if('token' in data.payload) window.localStorage.setItem('token', data.payload.token)
       navigate("/")
    }
