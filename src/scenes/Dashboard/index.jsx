@@ -23,10 +23,13 @@ const Dashboard = () => {
       redirect()
    },[authData])
    return (
-       <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+       <div style={{display: "flex", justifyContent: "center", alignItems: "center", textAlign: "center"}}>
           {
-             authData?.status === "loading" ?
-                 <h1>Connecting to the server...</h1>
+             authData?.status !== "loading" ?
+                 <div>
+                    <h1>Connecting to the server...</h1>
+                    <h1>Please wait around 10-15 seconds</h1>
+                 </div>
                  :
                  <div></div>
           }
