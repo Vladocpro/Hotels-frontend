@@ -258,7 +258,7 @@ const Registration = () => {
              </form>
              {
                  isDataFetched &&
-                 <div>
+                 <div  style={{textAlign: "center"}}>
                     <h3>Connecting to the server...</h3>
                     <h3>Please wait around 10-15 seconds</h3>
                  </div>

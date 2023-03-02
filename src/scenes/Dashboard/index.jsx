@@ -37,7 +37,7 @@ const Dashboard = () => {
        <div style={{display: "flex", justifyContent: "center", alignItems: "center", textAlign: "center"}}>
           {
              isDataFetched && isAuth.data === null ?
-                 <div>
+                 <div  style={{textAlign: "center"}}>
                     <h1>Connecting to the server...</h1>
                     <h1>Please wait around 10-15 seconds</h1>
                  </div>
