@@ -13,7 +13,7 @@ const Dashboard = () => {
 
    let navigate = useNavigate()
    const redirect = () => {
-      if(authData?.status == "loading") return
+      if(authData?.status === "loading") return
       if(authData.data == null && !isAuth) navigate("/login")
    }
    useEffect(() => {
@@ -23,7 +23,13 @@ const Dashboard = () => {
       redirect()
    },[authData])
    return (
-       <div>
+       <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+          {
+             authData?.status === "loading" ?
+                 <h1>Connecting to the server...</h1>
+                 :
+                 <div></div>
+          }
 
        </div>
    );
