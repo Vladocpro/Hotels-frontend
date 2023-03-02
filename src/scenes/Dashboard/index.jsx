@@ -22,6 +22,10 @@ const Dashboard = () => {
       setIsDataFetched(false);
    }
    useEffect(() => {
+      if(authData.data !== null) setIsDataFetched(false);
+   },[isDataFetched]);
+
+   useEffect(() => {
       setWaitingForServerRes()
       if (!isAuth) dispatch(fetchAuthMe())
    },[])
@@ -31,7 +35,7 @@ const Dashboard = () => {
    return (
        <div style={{display: "flex", justifyContent: "center", alignItems: "center", textAlign: "center"}}>
           {
-             isDataFetched ?
+             isDataFetched && isAuth.data === null ?
                  <div>
                     <h1>Connecting to the server...</h1>
                     <h1>Please wait around 10-15 seconds</h1>
